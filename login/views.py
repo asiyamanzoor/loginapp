@@ -16,11 +16,11 @@ def register(request):
         global ark, fit 
         ark = user_name
         fit = first_name
-        #customer = Customer(user_name = user_name, password = password)
-        #customer.save()
+        customer = Customer(user_name = user_name, password = password)
+        customer.save()
 
-        doctor = Doctor(first_name = first_name, last_name = last_name, user_name = user_name, password = password)
-        doctor.save()
+        #doctor = Doctor(first_name = first_name, last_name = last_name, user_name = user_name, password = password)
+        #doctor.save()
     return render(request, 'login/register.html')        
 def home(request):
     print('login-request')
